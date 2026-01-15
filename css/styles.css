@@ -12,12 +12,62 @@
 :root {
     --color-black: rgba(58, 58, 58, 1);
     --color-white: rgba(255, 255, 255, 1);
-    --color-gray: red;
-    --text-simple: 1rem;
+    --color-gray: rgb(129, 129, 129);
+    --color-pink: rgba(224, 44, 109, 1);
+    --text-normal: 1rem;
     --text-title: 1.5rem;
+    --text-title-sm: 2rem;
+    --text-title-lg: 3rem;
+}
+
+/* custom classes */
+.mt-10 {
+    margin-top: 10px;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.title-lg {
+    font-size: var(--text-title-lg);
+    color: var(--color-black);
+    font-weight: 700;
+}
+
+.text-normal {
+    font-size: var(--text-normal);
+    font-weight: 600;
+    color: var(--color-gray);
+}
+
+.btn {
+    background-color: var(--color-pink);
+    padding: 10px 24px;
+    color: var(--color-white);
+    font-size: var(--text-normal);
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-round {
+    border-radius: 41px;
+}
+
+/* animation */
+.icon-arrow {
+    transition: 0.1s ease-in;
+}
+
+.btn:hover .icon-arrow {
+    transform: translateX(10px);
 }
 
 /* shared styles */
+section {
+    margin: 50px 0;
+}
 
 /* header */
 header {
@@ -64,48 +114,34 @@ nav ul li a {
     text-decoration: none;
     color: var(--color-black);
     font-weight: 600;
-    font-size: var(--text-simple);
+    font-size: var(--text-normal);
 }
 
 nav ul li .icon {
     cursor: pointer;
 }
 
-/* responsive: small device */
-@media screen and (max-width: 576px) {
-    header {
-        margin: 30px auto;
-    }
-
-    nav {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-
-    .nav-lg {
-        display: none;
-    }
-
-    .nav-sm-top {
-        display: flex;
-        gap: 10px;
-    }
-
-    .nav-left {
-        justify-content: space-between;
-        gap: 50px;
-    }
-
-    .nav-sm-bottom {
-        display: flex;
-        flex-direction: row;
-        gap: 30px;
-    }
+/* banner section */
+.banner-content {
+    max-width: 582px;
 }
 
-/* responsive: medium device */
-@media screen and (min-width: 576px) and (max-width: 992px) {
+.banner-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.banner-image img {
+    width: 100%;
+    background-image: url("../images/Circle\ design.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+/* responsive: small device */
+@media screen and (max-width: 992px) {
     header {
         margin: 30px auto;
     }
@@ -134,5 +170,24 @@ nav ul li .icon {
         display: flex;
         flex-direction: row;
         gap: 30px;
+    }
+
+    .banner-section {
+        flex-direction: column-reverse;
+        gap: 30px;
+        padding: 0 50px;
+        text-align: center;
+    }
+
+    .banner-content {
+        width: 100%;
+    }
+
+    .banner-image img {
+        width: 70%;
+    }
+
+    .title-lg {
+        font-size: var(--text-title-sm);
     }
 }
