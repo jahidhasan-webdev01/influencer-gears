@@ -7,3 +7,132 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
+
+/* root */
+:root {
+    --color-black: rgba(58, 58, 58, 1);
+    --color-white: rgba(255, 255, 255, 1);
+    --color-gray: red;
+    --text-simple: 1rem;
+    --text-title: 1.5rem;
+}
+
+/* shared styles */
+
+/* header */
+header {
+    margin: 50px 120px;
+}
+
+/* navigation styles */
+.nav-left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-sm-top {
+    display: none;
+}
+
+.nav-sm-bottom {
+    display: none;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.brand {
+    font-size: var(--text-title);
+    font-weight: 700;
+    color: var(--color-black);
+    cursor: pointer;
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--color-black);
+    font-weight: 600;
+    font-size: var(--text-simple);
+}
+
+nav ul li .icon {
+    cursor: pointer;
+}
+
+/* responsive: small device */
+@media screen and (max-width: 576px) {
+    header {
+        margin: 30px auto;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .nav-lg {
+        display: none;
+    }
+
+    .nav-sm-top {
+        display: flex;
+        gap: 10px;
+    }
+
+    .nav-left {
+        justify-content: space-between;
+        gap: 50px;
+    }
+
+    .nav-sm-bottom {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+    }
+}
+
+/* responsive: medium device */
+@media screen and (min-width: 576px) and (max-width: 992px) {
+    header {
+        margin: 30px auto;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .nav-lg {
+        display: none;
+    }
+
+    .nav-sm-top {
+        display: flex;
+        gap: 10px;
+    }
+
+    .nav-left {
+        justify-content: space-between;
+        gap: 50px;
+    }
+
+    .nav-sm-bottom {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+    }
+}
