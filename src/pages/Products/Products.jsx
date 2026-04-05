@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { ProductsContext } from "../../context/ProductsContext";
 import ProductCard from "../../components/ProductCard/ProductCard";
+import { LuFilter } from "react-icons/lu";
 
 const Products = () => {
     const products = useContext(ProductsContext);
@@ -9,44 +10,102 @@ const Products = () => {
     const [sort, setSort] = useState("default");
     const [selectedBrands, setSelectedBrands] = useState([])
 
-    useEffect(() => {
+    const filterBrands = () => {
         const uniqueBrands = [...new Set(products.map(product => product.brand))];
         setBrands(uniqueBrands);
+    }
+
+    useEffect(() => {
+        filterBrands();
         setFilterProducts(products);
     }, [products]);
 
+
     const handleBrandChange = (e) => {
-        setSelectedBrands([...selectedBrands, e.target.value])
+        setSelectedBrands([...selectedBrands, e.target.value]);
+        const filterPro = products.filter((product) => selectedBrands.includes(product.brand) || product.brand === e.target.value)
+
+        setFilterProducts(filterPro);
     }
 
-    console.log({ selectedBrands });
+    const handleSort = (sortType) => {
+        setSort(sortType);
+
+        if (sortType === "default") {
+            handleBrandChange();
+            return;
+        }
+
+        let sortedProducts = [];
+        if (sortType === "low") {
+            sortedProducts = filterProducts.sort((a, b) => a.price - b.price)
+        } else if (sortType === "high") {
+            sortedProducts = filterProducts.sort((a, b) => b.price - a.price)
+        }
+        setFilterProducts([...sortedProducts])
+    }
 
     return (
         <div className="w-full px-2 md:w-10/12 md:px-0 mx-auto py-10 lg:py-20">
             <h1 className="text-center text-4xl font-extrabold">All Collection</h1>
-            {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 mt-10">
-                
-            </div> */}
+
+            <div className="drawer">
+                <input id="my-drawer-1" type="checkbox" className="drawer-toggle" />
+
+                <div className="drawer-side">
+                    <label
+                        htmlFor="my-drawer-1"
+                        aria-label="close sidebar"
+                        className="drawer-overlay"
+                    ></label>
+
+                    <div className="bg-base-200 min-h-full w-80 p-4 pt-50">
+                        <h1 className="text-xl font-bold">Brands</h1>
+
+                        <form>
+                            {brands.map((br, index) => (
+                                <label
+                                    key={index}
+                                    className="flex items-center gap-2 cursor-pointer hover:bg-purple-50 px-4 py-1"
+                                >
+                                    <input
+                                        type="checkbox"
+                                        value={br}
+                                        onChange={handleBrandChange}
+                                    />
+                                    {br}
+                                </label>
+                            ))}
+                        </form>
+                    </div>
+                </div>
+            </div>
 
             <div className="grid grid-cols-5 gap-5 mt-10">
-                <div className="space-y-5 col-span-1">
+                <div className="space-y-5 col-span-5 md:col-span-1 flex flex-row-reverse justify-between md:justify-start md:flex-col px-5 md:px-0">
+
                     <div>
-                        <h1 className="text-xl font-bold">Sort</h1>
+                        <h1 className="text-xl font-bold">Sort by price</h1>
                         <form className="mt-2">
                             <select
                                 value={sort}
-                                onChange={(e) => setSort(e.target.value)}
-                                className="border-2 border-purple-300 px-3 py-2 rounded"
+                                onChange={(e) => handleSort(e.target.value)}
+                                className="border px-3 py-2 rounded"
                             >
                                 <option value="default">Default</option>
-                                <option value="low">Price: Low to High</option>
-                                <option value="high">Price: High to Low</option>
+                                <option value="low">Low to High</option>
+                                <option value="high">High to Low</option>
                             </select>
                         </form>
                     </div>
+
                     <div>
                         <h1 className="text-xl font-bold">Brands</h1>
-                        <form className="mt-2">
+                        <label htmlFor="my-drawer-1" className="mt-2 btn btn-sm btn-neutral md:hidden flex justify-center items-center">
+                            <LuFilter />
+                        </label>
+
+                        <form className="mt-2 hidden md:block">
                             {
                                 brands.map((br, index) =>
                                     <label
@@ -62,9 +121,11 @@ const Products = () => {
                             }
                         </form>
                     </div>
+
+
                 </div>
 
-                <div className="col-span-4 w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                <div className="col-span-5 md:col-span-4 w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                     {
                         filterProducts.map((product, index) => <ProductCard key={index} product={product} />)
                     }

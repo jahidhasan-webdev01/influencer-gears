@@ -1,8 +1,11 @@
+import { useContext } from 'react';
 import { FiShoppingCart } from 'react-icons/fi';
 import { IoSearch } from 'react-icons/io5';
 import { Link } from 'react-router';
+import { CartContext } from '../../context/CartContext';
 
 const Navbar = () => {
+    const {cart} = useContext(CartContext)
     return (
         <div className="bg-base-100 shadow-sm pt-10">
             <div className='navbar w-full px-2 md:w-10/12 md:px-0 mx-auto'>
@@ -29,7 +32,10 @@ const Navbar = () => {
                         <Link className='hidden lg:flex hover:underline hover:text-purple-500'>Sign up</Link>
                         <Link className='hidden lg:flex hover:underline hover:text-purple-500'>Log In</Link>
                         <Link><IoSearch className='text-xl' /></Link>
-                        <Link><FiShoppingCart className='text-xl' /></Link>
+                        <div>
+                            <Link><FiShoppingCart className='text-xl relative' /></Link>
+                            <span className='absolute top-2 -right-3 text-xs bg-purple-500 px-1 rounded-full flex items-center justify-center text-white'>{cart.length}</span>
+                        </div>
                     </div>
                 </div>
             </div>

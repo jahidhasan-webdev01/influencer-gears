@@ -6,15 +6,24 @@ import Home from './pages/Home/Home'
 import NotFound from './pages/NotFound/NotFound'
 import ProductsProvider from './context/ProductsContext'
 import Products from './pages/Products/Products'
+import Layout from './Layout/Layout'
+import CartProvider from './context/CartContext'
+
 
 const router = createBrowserRouter([
   {
     path: "/",
-    Component: Home
-  },
-  {
-    path: "/products",
-    Component: Products
+    Component: Layout,
+    children: [
+      {
+        index: true,
+        Component: Home
+      },
+      {
+        path: "/products",
+        Component: Products
+      },
+    ]
   },
   {
     path: "*",
@@ -24,8 +33,10 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <ProductsProvider>
-      <RouterProvider router={router}></RouterProvider>
-    </ProductsProvider>
+    <CartProvider>
+      <ProductsProvider>
+        <RouterProvider router={router}></RouterProvider>
+      </ProductsProvider>
+    </CartProvider>
   </StrictMode>,
 )

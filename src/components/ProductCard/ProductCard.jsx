@@ -1,9 +1,13 @@
+import { useContext } from "react";
 import { FaCheckCircle } from "react-icons/fa";
 import { FiShoppingCart } from "react-icons/fi";
 import { TbCoinTakaFilled } from "react-icons/tb";
+import { CartContext } from "../../context/CartContext";
 
 const ProductCard = ({ product }) => {
     const { image, name, category, price, rating, reviews, features } = product;
+    const { cart, addToCart } = useContext(CartContext);
+
     return (
         <div className="border border-gray-200 rounded-xl group">
             <div className="relative w-full h-64 overflow-hidden flex items-center justify-center">
@@ -37,10 +41,23 @@ const ProductCard = ({ product }) => {
                     }
                 </div>
 
-                <button className="btn w-full bg-purple-500 border border-purple-600 text-white rounded-full mt-5">
-                    add to cart
-                    <FiShoppingCart />
-                </button>
+                {
+                    cart.find((pro) => pro.id === product.id)
+                        ?
+                        <button
+                            disabled
+                            className="btn w-full bg-transparent border border-purple-600 text-purple-500 rounded-full mt-5">
+                            added to cart <FiShoppingCart />
+                        </button>
+                        :
+                        <button
+                            onClick={() => addToCart(product)}
+                            className="btn w-full bg-purple-500 border border-purple-600 text-white rounded-full mt-5 hover:bg-transparent hover:text-purple-500">
+                            add to cart
+                            <FiShoppingCart />
+                        </button>
+                }
+
             </div>
         </div>
     );
