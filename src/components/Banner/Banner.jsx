@@ -8,7 +8,7 @@ const Banner = () => {
             <div className='flex-1 space-y-5 text-center lg:text-left'>
                 <h1 className='text-4xl md:text-5xl font-extrabold'>Start your Journey as <br /> Influencer</h1>
                 <p className='font-bold'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sem vestibulum sed scelerisque eros. Lectus faucibus.</p>
-                <button className='btn bg-pink-500 rounded-full text-white text-xs border border-pink-600 hover:bg-transparent hover:text-pink-500 w-full md:w-fit'>
+                <button className='btn bg-purple-500 rounded-full text-white text-xs border border-purple-600 hover:bg-transparent hover:text-purple-500 w-full md:w-fit'>
                     PREBOOK NOW <FaArrowRight className='animate-bounce' />
                 </button>
             </div>

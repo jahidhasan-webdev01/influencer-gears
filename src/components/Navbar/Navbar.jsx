@@ -15,20 +15,20 @@ const Navbar = () => {
                         <ul
                             tabIndex="-1"
                             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                            <Link to="/">Home</Link>
-                            <Link>Products</Link>
-                            <Link>Sign up</Link>
-                            <Link>Log In</Link>
+                            <Link to="/" className='hover:underline hover:text-purple-500'>Home</Link>
+                            <Link className='hover:underline hover:text-purple-500'>Products</Link>
+                            <Link className='hover:underline hover:text-purple-500'>Sign up</Link>
+                            <Link className='hover:underline hover:text-purple-500'>Log In</Link>
                         </ul>
                     </div>
                     <Link to={"/"} className="text-xl cursor-pointer font-bold">Influencer Gears</Link>
                 </div>
                 <div className="navbar-end">
                     <div className="flex items-center gap-5 text-base font-medium">
-                        <Link to="/" className='hidden lg:flex hover:underline'>Home</Link>
-                        <Link className='hidden lg:flex hover:underline'>Products</Link>
-                        <Link className='hidden lg:flex hover:underline'>Sign up</Link>
-                        <Link className='hidden lg:flex hover:underline'>Log In</Link>
+                        <Link to="/" className='hidden lg:flex hover:underline hover:text-purple-500'>Home</Link>
+                        <Link className='hidden lg:flex hover:underline hover:text-purple-500'>Products</Link>
+                        <Link className='hidden lg:flex hover:underline hover:text-purple-500'>Sign up</Link>
+                        <Link className='hidden lg:flex hover:underline hover:text-purple-500'>Log In</Link>
                         <Link><IoSearch className='text-xl' /></Link>
                         <Link><FiShoppingCart className='text-xl' /></Link>
                     </div>

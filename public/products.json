@@ -1,0 +1,402 @@
+[
+    {
+        "id": 1,
+        "name": "Canon EOS R6 Camera",
+        "category": "Camera",
+        "price": 2499,
+        "rating": 4.8,
+        "reviews": 320,
+        "image": "/images/r6.webp",
+        "brand": "Canon",
+        "features": [
+            "20MP Full-Frame Sensor",
+            "4K Video Recording",
+            "Dual Pixel Autofocus"
+        ],
+        "description": "High-performance mirrorless camera perfect for content creators."
+    },
+    {
+        "id": 2,
+        "name": "Sony ZV-1 Vlogging Camera",
+        "category": "Camera",
+        "price": 749,
+        "rating": 4.7,
+        "reviews": 540,
+        "image": "/images/zv.webp",
+        "brand": "Sony",
+        "features": [
+            "Flip Screen",
+            "Real-time Eye AF",
+            "Compact Design"
+        ],
+        "description": "Compact vlogging camera with excellent autofocus."
+    },
+    {
+        "id": 3,
+        "name": "Rode VideoMic Pro+",
+        "category": "Microphone",
+        "price": 299,
+        "rating": 4.6,
+        "reviews": 410,
+        "image": "/images/rode.jpg",
+        "brand": "Rode",
+        "features": [
+            "Shotgun Mic",
+            "Rechargeable Battery",
+            "Low Noise"
+        ],
+        "description": "Professional on-camera microphone."
+    },
+    {
+        "id": 4,
+        "name": "Neewer Ring Light Kit",
+        "category": "Lighting",
+        "price": 129,
+        "rating": 4.5,
+        "reviews": 280,
+        "image": "/images/4.jpg",
+        "brand": "Neewer",
+        "features": [
+            "18 inch LED",
+            "Adjustable Brightness",
+            "Phone Holder"
+        ],
+        "description": "Perfect lighting for YouTube and TikTok videos."
+    },
+    {
+        "id": 5,
+        "name": "Joby GorillaPod Tripod",
+        "category": "Tripod",
+        "price": 89,
+        "rating": 4.7,
+        "reviews": 610,
+        "image": "/images/5.webp",
+        "brand": "Joby",
+        "features": [
+            "Flexible Legs",
+            "Lightweight",
+            "Universal Mount"
+        ],
+        "description": "Flexible tripod for stable shots."
+    },
+    {
+        "id": 6,
+        "name": "Elgato Key Light",
+        "category": "Lighting",
+        "price": 199,
+        "rating": 4.6,
+        "reviews": 150,
+        "image": "/images/6.png",
+        "brand": "Elgato",
+        "features": [
+            "WiFi Control",
+            "Adjustable Temperature",
+            "Edge-lit LED"
+        ],
+        "description": "Professional studio light for streaming."
+    },
+    {
+        "id": 7,
+        "name": "Blue Yeti USB Microphone",
+        "category": "Microphone",
+        "price": 129,
+        "rating": 4.7,
+        "reviews": 900,
+        "image": "/images/7.webp",
+        "brand": "Logitech",
+        "features": [
+            "USB Plug & Play",
+            "Multiple Patterns",
+            "Studio Quality"
+        ],
+        "description": "Popular mic for podcasting and streaming."
+    },
+    {
+        "id": 8,
+        "name": "DJI Osmo Mobile 6",
+        "category": "Gimbal",
+        "price": 159,
+        "rating": 4.6,
+        "reviews": 220,
+        "image": "/images/8.jpeg",
+        "brand": "DJI",
+        "features": [
+            "3-Axis Stabilization",
+            "ActiveTrack",
+            "Foldable Design"
+        ],
+        "description": "Smartphone gimbal for smooth footage."
+    },
+    {
+        "id": 9,
+        "name": "GoPro HERO11",
+        "category": "Camera",
+        "price": 499,
+        "rating": 4.8,
+        "reviews": 760,
+        "image": "/images/9.jpg",
+        "brand": "GoPro",
+        "features": [
+            "5.3K Video",
+            "Waterproof",
+            "HyperSmooth Stabilization"
+        ],
+        "description": "Action camera for adventure creators."
+    },
+    {
+        "id": 10,
+        "name": "Logitech StreamCam",
+        "category": "Camera",
+        "price": 169,
+        "rating": 4.5,
+        "reviews": 340,
+        "image": "/images/10.webp",
+        "brand": "Logitech",
+        "features": [
+            "1080p 60FPS",
+            "Auto Focus",
+            "USB-C"
+        ],
+        "description": "Perfect webcam for streamers."
+    },
+    {
+        "id": 11,
+        "name": "Aputure Amaran 100D",
+        "category": "Lighting",
+        "price": 199,
+        "rating": 4.7,
+        "reviews": 180,
+        "image": "/images/11.jpg",
+        "brand": "Aputure",
+        "features": [
+            "100W LED",
+            "Silent Cooling",
+            "Bowens Mount"
+        ],
+        "description": "Powerful LED light for studio creators."
+    },
+    {
+        "id": 12,
+        "name": "Manfrotto Compact Tripod",
+        "category": "Tripod",
+        "price": 79,
+        "rating": 4.4,
+        "reviews": 250,
+        "image": "/images/12.jpg",
+        "brand": "Manfrotto",
+        "features": [
+            "Lightweight",
+            "Quick Release Plate",
+            "Stable Build"
+        ],
+        "description": "Reliable tripod for cameras."
+    },
+    {
+        "id": 13,
+        "name": "DJI Mini 3 Drone",
+        "category": "Drone",
+        "price": 699,
+        "rating": 4.8,
+        "reviews": 300,
+        "image": "/images/13.webp",
+        "brand": "DJI",
+        "features": [
+            "4K HDR Video",
+            "38min Flight",
+            "Lightweight"
+        ],
+        "description": "Compact drone for aerial footage."
+    },
+    {
+        "id": 14,
+        "name": "Rode Wireless GO II",
+        "category": "Microphone",
+        "price": 299,
+        "rating": 4.7,
+        "reviews": 500,
+        "image": "/images/14.jpg",
+        "brand": "Rode",
+        "features": [
+            "Wireless Audio",
+            "Dual Channel",
+            "Compact Design"
+        ],
+        "description": "Wireless microphone system."
+    },
+    {
+        "id": 15,
+        "name": "Godox Softbox Kit",
+        "category": "Lighting",
+        "price": 119,
+        "rating": 4.5,
+        "reviews": 210,
+        "image": "/images/15.jpg",
+        "brand": "Godox",
+        "features": [
+            "Soft Diffused Light",
+            "Portable",
+            "Easy Setup"
+        ],
+        "description": "Soft lighting for studio setups."
+    },
+    {
+        "id": 16,
+        "name": "Ulanzi Phone Tripod",
+        "category": "Tripod",
+        "price": 35,
+        "rating": 4.4,
+        "reviews": 140,
+        "image": "/images/16.jpg",
+        "brand": "Ulanzi",
+        "features": [
+            "Mini Tripod",
+            "Phone Mount",
+            "Portable"
+        ],
+        "description": "Tripod for smartphone creators."
+    },
+    {
+        "id": 17,
+        "name": "DJI Mic 2",
+        "category": "Microphone",
+        "price": 349,
+        "rating": 4.8,
+        "reviews": 190,
+        "image": "/images/17.jpg",
+        "brand": "DJI",
+        "features": [
+            "Wireless",
+            "Noise Reduction",
+            "Long Battery"
+        ],
+        "description": "Premium wireless mic."
+    },
+    {
+        "id": 18,
+        "name": "Elgato Facecam",
+        "category": "Camera",
+        "price": 199,
+        "rating": 4.6,
+        "reviews": 260,
+        "image": "/images/18.webp",
+        "brand": "Elgato",
+        "features": [
+            "1080p 60fps",
+            "Sony Sensor",
+            "Low-light Performance"
+        ],
+        "description": "High-quality streaming webcam."
+    },
+    {
+        "id": 19,
+        "name": "SmallRig Camera Cage",
+        "category": "Accessories",
+        "price": 89,
+        "rating": 4.7,
+        "reviews": 120,
+        "image": "/images/19.webp",
+        "brand": "SmallRig",
+        "features": [
+            "Aluminum Build",
+            "Multiple Mounts",
+            "Lightweight"
+        ],
+        "description": "Camera cage for mounting accessories."
+    },
+    {
+        "id": 20,
+        "name": "SanDisk Extreme 128GB SD Card",
+        "category": "Storage",
+        "price": 29,
+        "rating": 4.8,
+        "reviews": 1100,
+        "image": "/images/20.webp",
+        "brand": "SanDisk",
+        "features": [
+            "128GB",
+            "Fast Write Speed",
+            "4K Ready"
+        ],
+        "description": "High-speed memory card."
+    },
+    {
+        "id": 21,
+        "name": "Sony ECM-B1M Shotgun Mic",
+        "category": "Microphone",
+        "price": 349,
+        "rating": 4.6,
+        "reviews": 95,
+        "image": "/images/21.jpg",
+        "brand": "Sony",
+        "features": [
+            "Digital Audio",
+            "Shotgun Direction",
+            "Noise Reduction"
+        ],
+        "description": "Compact shotgun microphone."
+    },
+    {
+        "id": 22,
+        "name": "Ulanzi RGB Pocket Light",
+        "category": "Lighting",
+        "price": 45,
+        "rating": 4.5,
+        "reviews": 180,
+        "image": "/images/22.avif",
+        "brand": "Ulanzi",
+        "features": [
+            "RGB Colors",
+            "Rechargeable",
+            "Portable"
+        ],
+        "description": "Pocket RGB LED light."
+    },
+    {
+        "id": 23,
+        "name": "Peak Design Camera Strap",
+        "category": "Accessories",
+        "price": 69,
+        "rating": 4.7,
+        "reviews": 210,
+        "image": "/images/23.jpg",
+        "brand": "Peak Design",
+        "features": [
+            "Quick Release",
+            "Comfort Padding",
+            "Durable"
+        ],
+        "description": "Comfortable camera strap."
+    },
+    {
+        "id": 24,
+        "name": "Zhiyun Crane M3",
+        "category": "Gimbal",
+        "price": 369,
+        "rating": 4.6,
+        "reviews": 150,
+        "image": "/images/24.webp",
+        "brand": "Zhiyun",
+        "features": [
+            "3-Axis Stabilization",
+            "OLED Display",
+            "Compact"
+        ],
+        "description": "Professional camera stabilizer."
+    },
+    {
+        "id": 25,
+        "name": "Aputure MC RGB Light",
+        "category": "Lighting",
+        "price": 99,
+        "rating": 4.7,
+        "reviews": 130,
+        "image": "/images/25.avif",
+        "brand": "Aputure",
+        "features": [
+            "Full RGB",
+            "Magnetic Mount",
+            "App Control"
+        ],
+        "description": "Compact RGB light."
+    }
+]

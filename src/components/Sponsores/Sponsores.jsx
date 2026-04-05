@@ -15,7 +15,7 @@ const Sponsores = () => {
     }, [])
 
     return (
-        <div className="py-10 lg:py-20 bg-pink-100 px-5">
+        <div className="py-10 lg:py-20 bg-purple-100 px-5">
             <div className="flex flex-row space-x-10 justify-center items-center flex-wrap">
 
                 {
