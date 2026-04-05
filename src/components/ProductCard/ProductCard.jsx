@@ -3,16 +3,16 @@ import { FiShoppingCart } from "react-icons/fi";
 import { TbCoinTakaFilled } from "react-icons/tb";
 
 const ProductCard = ({ product }) => {
-    const { image, name, category, price, rating, brand, description, reviews, features } = product;
+    const { image, name, category, price, rating, reviews, features } = product;
     return (
-        <div className="border border-gray-200 rounded-xl">
-            <div className="w-full h-64 overflow-hidden flex items-center justify-center">
+        <div className="border border-gray-200 rounded-xl group">
+            <div className="relative w-full h-64 overflow-hidden flex items-center justify-center">
                 <img
                     src={image}
                     alt={name}
-                    className="w-full h-full object-contain"
+                    className="w-full h-full object-contain hover:scale-110 duration-150"
                 />
-                <p className="absolute top-2 right-2 bg-purple-500 text-white text-xs px-2 py-1 rounded-full">
+                <p className="absolute top-2 right-0 bg-purple-500 text-white text-xs px-3 py-1 rounded-l-full">
                     {category}
                 </p>
             </div>
@@ -21,7 +21,7 @@ const ProductCard = ({ product }) => {
                 <h1 className="text-2xl font-bold">{name}</h1>
                 <div className="flex flex-row justify-between">
                     <p className="inline-flex items-center gap-1 font-bold text-xl"><TbCoinTakaFilled /> {price}</p>
-                    <p className="text-xs bg-purple-500 border border-purple-700 text-white rounded-full px-2 flex items-center font-medium">{rating} ({reviews})</p>
+                    <p className="text-xs border border-purple-700 text-purple-700 rounded-full px-2 flex items-center font-medium">{rating} ({reviews})</p>
                 </div>
 
                 <div>

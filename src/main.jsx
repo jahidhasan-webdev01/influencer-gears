@@ -5,11 +5,16 @@ import { createBrowserRouter, RouterProvider } from 'react-router'
 import Home from './pages/Home/Home'
 import NotFound from './pages/NotFound/NotFound'
 import ProductsProvider from './context/ProductsContext'
+import Products from './pages/Products/Products'
 
 const router = createBrowserRouter([
   {
     path: "/",
     Component: Home
+  },
+  {
+    path: "/products",
+    Component: Products
   },
   {
     path: "*",

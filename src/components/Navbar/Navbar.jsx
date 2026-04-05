@@ -1,4 +1,3 @@
-import React from 'react';
 import { FiShoppingCart } from 'react-icons/fi';
 import { IoSearch } from 'react-icons/io5';
 import { Link } from 'react-router';
@@ -16,7 +15,7 @@ const Navbar = () => {
                             tabIndex="-1"
                             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
                             <Link to="/" className='hover:underline hover:text-purple-500'>Home</Link>
-                            <Link className='hover:underline hover:text-purple-500'>Products</Link>
+                            <Link to="/products" className='hover:underline hover:text-purple-500'>Products</Link>
                             <Link className='hover:underline hover:text-purple-500'>Sign up</Link>
                             <Link className='hover:underline hover:text-purple-500'>Log In</Link>
                         </ul>
@@ -26,7 +25,7 @@ const Navbar = () => {
                 <div className="navbar-end">
                     <div className="flex items-center gap-5 text-base font-medium">
                         <Link to="/" className='hidden lg:flex hover:underline hover:text-purple-500'>Home</Link>
-                        <Link className='hidden lg:flex hover:underline hover:text-purple-500'>Products</Link>
+                        <Link to="/products" className='hidden lg:flex hover:underline hover:text-purple-500'>Products</Link>
                         <Link className='hidden lg:flex hover:underline hover:text-purple-500'>Sign up</Link>
                         <Link className='hidden lg:flex hover:underline hover:text-purple-500'>Log In</Link>
                         <Link><IoSearch className='text-xl' /></Link>

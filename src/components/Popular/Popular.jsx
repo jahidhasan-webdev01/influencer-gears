@@ -21,7 +21,7 @@ const Popular = () => {
                 }
             </div>
 
-            <Link to="/" className="text-right mt-5 text-purple-500 font-semibold flex items-center justify-end-safe gap-1">
+            <Link to="/products" className="text-right mt-5 text-purple-500 font-semibold flex items-center justify-end-safe gap-1">
                 see more
                 <FaArrowRight className='animate-bounce' />
             </Link>
