@@ -5,7 +5,7 @@ import { FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router";
 
 const Popular = () => {
-    const products = useContext(ProductsContext);
+    const { products } = useContext(ProductsContext);
 
     const popular = products
         .slice()

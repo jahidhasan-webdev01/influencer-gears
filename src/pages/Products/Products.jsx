@@ -4,45 +4,44 @@ import ProductCard from "../../components/ProductCard/ProductCard";
 import { LuFilter } from "react-icons/lu";
 
 const Products = () => {
-    const products = useContext(ProductsContext);
+    const { products, brands } = useContext(ProductsContext);
+
     const [filterProducts, setFilterProducts] = useState([])
-    const [brands, setBrands] = useState([]);
-    const [sort, setSort] = useState("default");
+
+    const [sortType, setSortType] = useState("default");
     const [selectedBrands, setSelectedBrands] = useState([])
 
-    const filterBrands = () => {
-        const uniqueBrands = [...new Set(products.map(product => product.brand))];
-        setBrands(uniqueBrands);
-    }
-
     useEffect(() => {
-        filterBrands();
         setFilterProducts(products);
     }, [products]);
 
+    useEffect(() => {
+        let result = [...products];
+
+        if (selectedBrands.length) {
+            result = result.filter(p => selectedBrands.includes(p.brand));
+        }
+
+        if (sortType === "low") {
+            result.sort((a, b) => a.price - b.price);
+        }
+
+        if (sortType === "high") {
+            result.sort((a, b) => b.price - a.price);
+        }
+
+        setFilterProducts(result);
+
+    }, [products, selectedBrands, sortType]);
+
 
     const handleBrandChange = (e) => {
-        setSelectedBrands([...selectedBrands, e.target.value]);
-        const filterPro = products.filter((product) => selectedBrands.includes(product.brand) || product.brand === e.target.value)
-
-        setFilterProducts(filterPro);
-    }
-
-    const handleSort = (sortType) => {
-        setSort(sortType);
-
-        if (sortType === "default") {
-            handleBrandChange();
-            return;
+        if (selectedBrands.includes(e.target.value)) {
+            const newSelectedBrands = selectedBrands.filter((brand) => brand !== e.target.value)
+            setSelectedBrands(newSelectedBrands)
+        } else {
+            setSelectedBrands([...selectedBrands, e.target.value]);
         }
-
-        let sortedProducts = [];
-        if (sortType === "low") {
-            sortedProducts = filterProducts.sort((a, b) => a.price - b.price)
-        } else if (sortType === "high") {
-            sortedProducts = filterProducts.sort((a, b) => b.price - a.price)
-        }
-        setFilterProducts([...sortedProducts])
     }
 
     return (
@@ -88,8 +87,8 @@ const Products = () => {
                         <h1 className="text-xl font-bold">Sort by price</h1>
                         <form className="mt-2">
                             <select
-                                value={sort}
-                                onChange={(e) => handleSort(e.target.value)}
+                                value={sortType}
+                                onChange={(e) => setSortType(e.target.value)}
                                 className="border px-3 py-2 rounded"
                             >
                                 <option value="default">Default</option>

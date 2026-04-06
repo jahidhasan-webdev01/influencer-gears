@@ -7,7 +7,7 @@ const CartProvider = ({ children }) => {
     const [cart, setCart] = useState([]);
 
     const addToCart = (product) => {
-        setCart([...cart, product]);
+        setCart([...cart, { ...product, quantity: 1 }]);
         toast.success("Added to cart");
     }
 
