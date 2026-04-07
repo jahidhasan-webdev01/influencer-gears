@@ -81,7 +81,7 @@ const Products = () => {
             </div>
 
             <div className="grid grid-cols-5 gap-5 mt-10">
-                <div className="space-y-5 col-span-5 md:col-span-1 flex flex-row-reverse justify-between md:justify-start md:flex-col px-5 md:px-0">
+                <div className="space-y-5 col-span-5 md:col-span-1 flex flex-row-reverse justify-between md:justify-start md:flex-col px-5 md:px-0 sticky top-24 h-fit">
 
                     <div>
                         <h1 className="text-xl font-bold">Sort by price</h1>

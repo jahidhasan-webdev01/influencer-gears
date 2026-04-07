@@ -1,22 +1,6 @@
 [
     {
         "id": 1,
-        "name": "Canon EOS R6 Camera",
-        "category": "Camera",
-        "price": 2499,
-        "rating": 4.8,
-        "reviews": 320,
-        "image": "/images/r6.webp",
-        "brand": "Canon",
-        "features": [
-            "20MP Full-Frame Sensor",
-            "4K Video Recording",
-            "Dual Pixel Autofocus"
-        ],
-        "description": "High-performance mirrorless camera perfect for content creators."
-    },
-    {
-        "id": 2,
         "name": "Sony ZV-1 Vlogging Camera",
         "category": "Camera",
         "price": 749,
@@ -30,6 +14,22 @@
             "Compact Design"
         ],
         "description": "Compact vlogging camera with excellent autofocus."
+    },
+    {
+        "id": 2,
+        "name": "Canon EOS R6 Camera",
+        "category": "Camera",
+        "price": 2499,
+        "rating": 4.8,
+        "reviews": 320,
+        "image": "/images/r6.webp",
+        "brand": "Canon",
+        "features": [
+            "20MP Full-Frame Sensor",
+            "4K Video Recording",
+            "Dual Pixel Autofocus"
+        ],
+        "description": "High-performance mirrorless camera perfect for content creators."
     },
     {
         "id": 3,

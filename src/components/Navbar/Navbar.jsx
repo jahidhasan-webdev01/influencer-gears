@@ -1,11 +1,11 @@
 import { useContext } from 'react';
 import { FiShoppingCart } from 'react-icons/fi';
 import { IoSearch } from 'react-icons/io5';
-import { Link } from 'react-router';
+import { Link, NavLink } from 'react-router';
 import { CartContext } from '../../context/CartContext';
 
 const Navbar = () => {
-    const {cart} = useContext(CartContext)
+    const { cart } = useContext(CartContext)
     return (
         <div className="bg-base-100 shadow-sm pt-10">
             <div className='navbar w-full px-2 md:w-10/12 md:px-0 mx-auto'>
@@ -17,23 +17,23 @@ const Navbar = () => {
                         <ul
                             tabIndex="-1"
                             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                            <Link to="/" className='hover:underline hover:text-purple-500'>Home</Link>
-                            <Link to="/products" className='hover:underline hover:text-purple-500'>Products</Link>
-                            <Link className='hover:underline hover:text-purple-500'>Sign up</Link>
-                            <Link className='hover:underline hover:text-purple-500'>Log In</Link>
+                            <NavLink to="/" className='nav-link hover:underline hover:text-purple-500'>Home</NavLink>
+                            <NavLink to="/products" className='nav-link hover:underline hover:text-purple-500'>Products</NavLink>
+                            <NavLink to="sign-up" className='nav-link hover:underline hover:text-purple-500'>Sign up</NavLink>
+                            <NavLink to="login" className='nav-link hover:underline hover:text-purple-500'>Log In</NavLink>
                         </ul>
                     </div>
                     <Link to={"/"} className="text-xl cursor-pointer font-bold">Influencer Gears</Link>
                 </div>
                 <div className="navbar-end">
                     <div className="flex items-center gap-5 text-base font-medium">
-                        <Link to="/" className='hidden lg:flex hover:underline hover:text-purple-500'>Home</Link>
-                        <Link to="/products" className='hidden lg:flex hover:underline hover:text-purple-500'>Products</Link>
-                        <Link className='hidden lg:flex hover:underline hover:text-purple-500'>Sign up</Link>
-                        <Link className='hidden lg:flex hover:underline hover:text-purple-500'>Log In</Link>
-                        <Link><IoSearch className='text-xl' /></Link>
+                        <NavLink to="/" className='nav-link hidden lg:flex hover:underline hover:text-purple-500'>Home</NavLink>
+                        <NavLink to="/products" className='nav-link hidden lg:flex hover:underline hover:text-purple-500'>Products</NavLink>
+                        <NavLink to="sign-up" className='nav-link hidden lg:flex hover:underline hover:text-purple-500'>Sign up</NavLink>
+                        <NavLink to="login" className='nav-link hidden lg:flex hover:underline hover:text-purple-500'>Log In</NavLink>
+                        <NavLink to="/search" className="nav-link"><IoSearch className='text-xlnav-link ' /></NavLink>
                         <div>
-                            <Link><FiShoppingCart className='text-xl relative' /></Link>
+                            <NavLink to="/cart" className="nav-link"><FiShoppingCart className='text-xl relative' /></NavLink>
                             <span className='absolute top-2 -right-3 text-xs bg-purple-500 px-1 rounded-full flex items-center justify-center text-white'>{cart.length}</span>
                         </div>
                     </div>
