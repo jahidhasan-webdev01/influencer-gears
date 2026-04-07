@@ -9,7 +9,8 @@ const ProductCard = ({ product }) => {
     const { cart, addToCart } = useContext(CartContext);
 
     return (
-        <div className="border border-gray-200 rounded-xl group">
+        <div className="border border-gray-200 rounded-xl group flex flex-col h-full">
+
             <div className="relative w-full h-64 overflow-hidden flex items-center justify-center">
                 <img
                     src={image}
@@ -21,42 +22,48 @@ const ProductCard = ({ product }) => {
                 </p>
             </div>
 
-            <div className="p-4 space-y-2">
+            <div className="p-4 flex flex-col flex-1 space-y-2">
                 <h1 className="text-2xl font-bold">{name}</h1>
-                <div className="flex flex-row justify-between">
-                    <p className="inline-flex items-center gap-1 font-bold text-xl"><TbCoinTakaFilled /> {price}</p>
-                    <p className="text-xs border border-purple-700 text-purple-700 rounded-full px-2 flex items-center font-medium">{rating} ({reviews})</p>
+
+                <div className="flex justify-between">
+                    <p className="inline-flex items-center gap-1 font-bold text-xl">
+                        <TbCoinTakaFilled /> {price}
+                    </p>
+
+                    <p className="text-xs border border-purple-700 text-purple-700 rounded-full px-2 flex items-center font-medium">
+                        {rating} ({reviews})
+                    </p>
                 </div>
 
                 <div>
-                    {
-                        features.map((fet, index) =>
-                            <div
-                                key={index}
-                                className="flex items-center gap-2 text-sm text-gray-600"
-                            >
-                                <FaCheckCircle />
-                                <p>{fet}</p>
-                            </div>)
-                    }
+                    {features.map((fet, index) => (
+                        <div
+                            key={index}
+                            className="flex items-center gap-2 text-sm text-gray-600"
+                        >
+                            <FaCheckCircle />
+                            <p>{fet}</p>
+                        </div>
+                    ))}
                 </div>
 
-                {
-                    cart.find((pro) => pro.id === product.id)
-                        ?
-                        <button
-                            disabled
-                            className="btn w-full bg-transparent border border-purple-600 text-purple-500 rounded-full mt-5">
-                            added to cart <FiShoppingCart />
-                        </button>
-                        :
-                        <button
-                            onClick={() => addToCart(product)}
-                            className="btn w-full bg-purple-500 border border-purple-600 text-white rounded-full mt-5 hover:bg-transparent hover:text-purple-500">
-                            add to cart
-                            <FiShoppingCart />
-                        </button>
-                }
+                <div className="mt-auto">
+                    {
+                        cart.find((pro) => pro.id === product.id)
+                            ?
+                            <button
+                                disabled
+                                className="btn w-full bg-transparent border border-purple-600 text-purple-500 rounded-full mt-5">
+                                added to cart <FiShoppingCart />
+                            </button>
+                            :
+                            <button
+                                onClick={() => addToCart(product)}
+                                className="btn w-full bg-purple-500 border border-purple-600 text-white rounded-full mt-5 hover:bg-transparent hover:text-purple-500">
+                                add to cart <FiShoppingCart />
+                            </button>
+                    }
+                </div>
 
             </div>
         </div>
