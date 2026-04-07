@@ -1,16 +1,63 @@
-# React + Vite
+# Influencer Gear
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📌 Project Description
 
-Currently, two official plugins are available:
+Influencer Gear is a modern e-commerce web application where users can explore and purchase essential equipment used by content creators and influencers. The platform features products like cameras, microphones, lighting equipment, and accessories. Users can browse, search, filter products, and manage their cart for a smooth shopping experience.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🚀 Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* Browse influencer and content creator gear
+* 🔍 **Search products by name**
+* Filter products by brand
+* Add products to cart
+* Remove items from cart
+* Cart data saved using **Local Storage**
+* Filter preferences saved using **Session Storage**
+* Responsive and user-friendly UI
+* Toast notifications for user actions
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Technologies Used
+
+* **React.js**
+* **React Router**
+* **Context API**
+* **Tailwind CSS**
+* **React Icons**
+* **React Hot Toast**
+* **Local Storage**
+* **Session Storage**
+
+---
+
+## 📦 Packages / Libraries
+
+* `react-router-dom`
+* `react-hot-toast`
+* `react-icons`
+
+---
+
+## 💾 Data Storage (Local Database)
+
+* **Local Storage:** Used to store cart items so the cart remains even after page refresh.
+* **Session Storage:** Used to store filter data during the browsing session.
+
+## 🎯 Future Improvements
+
+* User authentication
+* Checkout system
+* Backend integration
+* Wishlist feature
+* Product reviews and ratings
+
+## Live Demo
+
+Check out the live version of the project here:
+
+🔗 Live Website:
+👉 https://influencer-gears01.netlify.app/
+---
