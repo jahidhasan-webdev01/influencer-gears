@@ -10,6 +10,7 @@ import CartProvider from './context/CartContext'
 import { Toaster } from 'react-hot-toast'
 import Layout from './Layout/Layout'
 import Cart from './pages/Cart/Cart'
+import ProductDetails from './pages/ProductDetails/ProductDetails'
 
 
 const router = createBrowserRouter([
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
       {
         path: "/products",
         Component: Products
+      },
+      {
+        path: "/product/:id",
+        Component: ProductDetails
       },
       {
         path: "/cart",

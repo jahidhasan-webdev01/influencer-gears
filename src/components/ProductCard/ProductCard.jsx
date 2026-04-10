@@ -3,6 +3,7 @@ import { FaCheckCircle } from "react-icons/fa";
 import { FiShoppingCart } from "react-icons/fi";
 import { TbCoinTakaFilled } from "react-icons/tb";
 import { CartContext } from "../../context/CartContext";
+import { Link } from "react-router";
 
 const ProductCard = ({ product }) => {
     const { image, name, category, price, rating, reviews, features } = product;
@@ -23,7 +24,9 @@ const ProductCard = ({ product }) => {
             </div>
 
             <div className="p-4 flex flex-col flex-1 space-y-2">
-                <h1 className="text-2xl font-bold">{name}</h1>
+                <Link to={`/product/${product.id}`}>
+                    <h1 className="text-2xl font-bold">{name}</h1>
+                </Link>
 
                 <div className="flex justify-between">
                     <p className="inline-flex items-center gap-1 font-bold text-xl">

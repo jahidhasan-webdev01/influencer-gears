@@ -5,6 +5,7 @@ import { LuFilter } from "react-icons/lu";
 import { TbCoinTakaFilled } from "react-icons/tb";
 import { CartContext } from "../../context/CartContext";
 import { FiShoppingCart } from "react-icons/fi";
+import { Link } from "react-router";
 
 const Products = () => {
     const { products, brands } = useContext(ProductsContext);
@@ -184,7 +185,9 @@ const Products = () => {
                                         <img src={product.image} alt={product.name} className="w-24 h-24" />
                                     </div>
                                     <div>
-                                        <h1 className="font-bold text-xl">{product.name}</h1>
+                                        <Link to={`/product/${product.id}`}>
+                                            <h1 className="font-bold text-xl">{product.name}</h1>
+                                        </Link>
                                         <ul className="text-sm text-gray-500 mt-2 pl-5">
                                             {
                                                 product.features.map((ft, index) => <li className="list-disc" key={index}>{ft}</li>)
